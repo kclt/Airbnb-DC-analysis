@@ -55,3 +55,10 @@ Listing dataset
 | `last review` | Date of the lastest review |
 
 ## Exploratory Data Analysis
+
+### Reviews
+
+### Listing
+
+## Implications and Future Improvements
+
