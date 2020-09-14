@@ -1,6 +1,6 @@
 # Airbnb-DC-analysis
 
-A simple exploration of Airbnb reviews and listing details to gain understand what factors are important to customer. 
+A simple eda exploration of Airbnb reviews and listing details to gain understand what factors are important to customer. 
 
 ## Introduction
 AirBnB is a platform economy that facilitate digital interactions between real estate owners and
@@ -58,7 +58,19 @@ Listing dataset
 
 ### Reviews
 
+The number of reviews have slowly increased over time
+
+#### Sentiment Analysis
+
+#### Topic modeling
+
 ### Listing
+
+#### Location
+
+#### Apartment Type
+
+#### Summary wordcloud
 
 ## Implications and Future Improvements
 
