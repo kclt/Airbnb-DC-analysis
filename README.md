@@ -105,11 +105,59 @@ From the Topic modelling, we find that user talks a lot about Airbnb location, a
 
 ### Listing
 
+To better understand the listing price of an Airbnb listing, we take a closer look at the listing details.
+After cleaning the dataset there are 9189 listing with 12 numerical variables, 7 categorical, 1 Date and 1 text after cleaning the dataset.
+Taking a deeper look at the variables, it is interesting to note the following observations:
+
+• There are 6076 distinct host with 49% of the host having only one listing and 14.7% having two listing. Interestingly though there is one host with 1795 listing (host name: Zeus)
+• 45% of the listing has property type Apartment with entire aprtment room type (71%) to be most common for listing.
+• distribution of listing across the neighbourhood are quite even with Columbia Heighs and Union station (~10%)
+
+Looking the correlation of Price to other variable, we can note that:
+
+![alt text](./3_Figures/correl.png)
+
+• Price is positively correlated to accommodates, bathrooms, beds, bedrooms (which are related
+to size), number of listing per host (though maybe skewed by Zeus)
+• more interestingly Price is negatively correlated to is whether host is superhost. Which may
+indicate that superhost are more realistic at pricing their listing.
+
+![alt text](./3_Figures/price_total.png)
+
+we can observe that majority of the listing has price in range between $0 to $600 and only around 400 listing that has price per night greater than $600 dollars. Taking a closer look at these high price listing, majority are large houses/mansions that are for rent and most of them do not have reviews left on them. Thus, we can treat them as outlier and do not represent the general majority of the listing in Washington DC. 
+
+![alt text](./3_Figures/histogramprice.png)
+
 #### Location
 
-#### Apartment Type
+![alt text](./3_Figures/location.png)
+
+From the boxplot and the map, we can observe that most expensive neighborhood on average for AirBnB is Georgetown and Southwest neighborhood followed by capital hill area, while the least expensive neighborhood on average is Mayfair. From the above maps and charts, we can see that there seems to be a general trend that closer the listing
+is to National Mall, the more expensive the average listing price. 
+
+#### Room and Property Type
+
+![alt text](./3_Figures/heatmap1.png)
+
+The above heatmap all the listing price broken down by property type and room type. This chart
+gives us a much better understanding of the price breakdown in DC based on property type and
+room type. It can be observed that private room in resort type is the most expensive. For property type that Entire home/aprt for those that have the option is the most expensive as expected.
 
 #### Summary wordcloud
 
+![alt text](./3_Figures/wordcloud.png)
+
+From the above word cloud, we can see that in summary section, most host owners that has a
+higher price list mentions most about it’s location relative to sightseeing spots (e.g. National Mall,
+Capital Hill), transport (metro station) then followed by amenities it provides. This thus further
+emphasis that location, location and location matters strongly when determining the price per
+night for AirBnB listings in Washington DC.
+
+From the EDA, we can observe various factor affect the listing price per night, but the most important factors are location and size of the listing.
+
 ## Implications and Future Improvements
+
+The implication of topic modeling and understanding of the pricing model, is that we can create a model to create a recommendation of what a listing price should be from it's listing details and from our topic modeling to create listing page that would attract customer to stay at. Though currently with a simple XGboost model, we are arriving at a pretty subpar accuracy thus for future iterations we can perhaps improve the recommendation model by using different models and use a ensemble model learning or conduct pca to reduce the the number of variables. 
+
+
 
